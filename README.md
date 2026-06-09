@@ -52,3 +52,19 @@ Certifique-se de possuir o **JDK 21** instalado em sua máquina.
    Execute o comando do Maven Wrapper para compilar o código fonte e subir o servidor Tomcat embutido:
    ```bash
    ./mvnw clean spring-boot:run
+Acessar o Painel no Navegador:
+Assim que o terminal exibir a linha informativa Tomcat started on port 8080 (http), abra seu navegador e acesse a URL da página inicial:
+👉 http://localhost:8080/index.html
+
+📁 Principais Endpoints da API REST (Mapeamento)
+GET /api/solicitacoes -> Retorna a listagem de despesas aplicando filtros dinâmicos de consulta (status, categoriaId, dataInicio, dataFim).
+
+GET /api/solicitacoes/{id} -> Retorna os dados completos detalhados de um registro específico.
+
+POST /api/solicitacoes -> Insere uma nova solicitação validando regras de negócio e aplicando o status inicial SOLICITADO.
+
+PUT /api/solicitacoes/{id}/status?novoStatus={STATUS} -> Executa o gatilho de transição da máquina de estados do workflow administrativo.
+
+GET /api/solicitacoes/solicitantes -> Alimenta os componentes dinâmicos de seleção do frontend.
+
+GET /api/solicitacoes/categorias -> Alimenta os componentes dinâmicos de seleção e filtros do frontend.
