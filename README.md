@@ -8,7 +8,7 @@ Este repositório contém uma aplicação corporativa completa para controle, au
 
 O ecossistema foi projetado seguindo as melhores práticas de desenvolvimento de software enterprise, visando alta performance, isolamento de escopo e facilidade de avaliação pela banca técnica:
 
-1. **Spring Boot & Java 21**
+1. **Spring Boot & Java 17**
    * Escolha fundamentada na resiliência, ecossistema maduro e segurança nativa. O gerenciamento de dependências via Maven garante o isolamento completo das bibliotecas de persistência e conversão de dados.
 
 2. **Banco de Dados H2 (In-Memory) com Carga Dinâmica (`data.sql`)**
@@ -43,7 +43,7 @@ O coração do sistema reside no controle rígido das transições de status das
 
 ## 🛠️ Como Executar o Projeto Localmente
 
-Certifique-se de possuir o **JDK 21** instalado em sua máquina.
+Certifique-se de possuir o **JDK 17** instalado em sua máquina.
 
 1. **Clonar ou Extrair o Projeto:**
    Abra o terminal (Prompt de Comando, PowerShell ou Terminal do Linux/Mac) na pasta raiz onde o arquivo `pom.xml` está localizado.
