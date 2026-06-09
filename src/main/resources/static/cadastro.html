@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGS - Nova Solicitação de Pagamento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <i class="bi bi-wallet2 me-2"></i> SGS - Gestão de Pagamentos
+        </a>
+    </div>
+</nav>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <a href="index.html" class="btn btn-sm btn-outline-secondary mb-4">
+                <i class="bi bi-arrow-left"></i> Voltar para a Listagem
+            </a>
+
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white py-3">
+                    <h4 class="card-title mb-0"><i class="bi bi-plus-circle me-2"></i> Nova Solicitação de Pagamento</h4>
+                </div>
+                <div class="card-body p-4">
+
+                    <form id="formCadastro">
+
+                        <div class="mb-4">
+                            <label for="selectSolicitante" class="form-label fw-bold">Solicitante</label>
+                            <select id="selectSolicitante" class="form-select" required>
+                                <option value="" disabled selected>Carregando solicitantes...</option>
+                            </select>
+                            <div class="form-text">Selecione o funcionário ou unidade responsável pela despesa.</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="selectCategoria" class="form-label fw-bold">Categoria do Gasto</label>
+                            <select id="selectCategoria" class="form-select" required>
+                                <option value="" disabled selected>Carregando categorias...</option>
+                            </select>
+                            <div class="form-text">Classificação contábil da solicitação.</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="inputValor" class="form-label fw-bold">Valor da Solicitação (R$)</label>
+                            <div class="input-group">
+                                <span class="input-group-text">R$</span>
+                                <input type="number" id="inputValor" class="form-control" step="0.01" min="0.01" placeholder="0,00" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="inputDescricao" class="form-label fw-bold">Descrição / Justificativa</label>
+                            <textarea id="inputDescricao" class="form-control" rows="4" placeholder="Detalhe o motivo deste pagamento, número de notas fiscais ou contratos associados..." required></textarea>
+                        </div>
+
+                        <div class="alert alert-info d-flex align-items-center" role="alert">
+                            <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+                            <div>
+                                Esta solicitação será salva automaticamente com o status inicial obrigatório de <strong>SOLICITADO</strong>.
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="d-flex justify-content-end">
+                            <a href="index.html" class="btn btn-light me-2">Cancelar</a>
+                            <button type="submit" class="btn btn-primary px-4">
+                                <i class="bi bi-save me-1"></i> Salvar Solicitação
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
